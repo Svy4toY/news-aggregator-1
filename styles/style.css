@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li:hover, button, img, h3, .read {
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  font-family: Trebuchet MS, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(54, 54, 54);
+  background-image: url("headpic.jpg");
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+}
+header h1 {
+  text-align: left;
+  margin-top: auto;
+  padding: 5%;
+  -webkit-text-size-adjust: 400%;
+     -moz-text-size-adjust: 400%;
+          text-size-adjust: 400%;
+}
+header .login {
+  display: inline-block;
+  margin: 3%;
+  height: 25%;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+header .login li {
+  list-style-type: none;
+}
+header .login button img {
+  display: none;
+}
+header .categories {
+  display: flex;
+  width: 100%;
+}
+header .categories button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 3% 10%;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+header .categories button:hover {
+  background-color: #e4e4e4;
+  color: rgb(17, 17, 17);
+}
+
+.wrapper {
+  flex-grow: 1;
+  background-color: #dadada;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .feed {
+  display: inline;
+  min-width: 60%;
+  max-width: 60%;
+}
+.wrapper .feed .news {
+  display: block;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.wrapper .feed .news h3, .wrapper .feed .news p {
+  padding: 2%;
+}
+.wrapper .feed .news .pic {
+  width: 100%;
+  margin-bottom: 2%;
+}
+.wrapper .side {
+  display: inline;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: sticky;
+  top: 2%;
+  margin-top: 2%;
+}
+.wrapper .side .hot {
+  background-color: #ffffff;
+  margin: 3%;
+  border-radius: 15px;
+}
+.wrapper .side .hot h3 {
+  text-align: center;
+}
+.wrapper .side .hot h3, .wrapper .side .hot p {
+  padding: 2%;
+}
+.wrapper .side .hot img {
+  border-radius: 15px;
+  width: 100%;
+}
+.wrapper .side .moreLinks {
+  background-color: #ffffff;
+  height: 20%;
+  margin: 3%;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+footer {
+  background-color: rgb(54, 54, 54);
+  margin-top: auto;
+  bottom: 0%;
+  padding: 2%;
+}
+
+@media (max-width: 1170px) {
+  header .categories button {
+    padding: 3%;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    background-size: 150%;
+  }
+  header h1 {
+    size-adjust: 80%;
+  }
+  header .categories {
+    display: none;
+  }
+  header .login {
+    display: grid;
+  }
+  header .login li {
+    display: none;
+  }
+  header .login button {
+    background-color: transparent;
+    border: transparent;
+  }
+  header .login button img {
+    display: block;
+    width: 50px;
+  }
+  .wrapper .feed {
+    max-width: 90%;
+    min-width: 90%;
+  }
+  .wrapper .hot, .wrapper .moreLinks {
+    display: none;
+  }
+  footer {
+    margin-top: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
